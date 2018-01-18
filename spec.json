@@ -1,40 +1,40 @@
 {
-  "namespace/BlockName": {
-    "version": "1.0.0",
-    "description": "Description of the block.",
+  "nio/DatadogCustomMetrics": {
+    "version": "0.1.0",
+    "description": "The DatadogCustomMetrics block will graph values in a timeseries graph on your Datadog dashboard. The `metric` property value must match the metric value specified in the graph on the dashboard.",
+    "categories": ["Web Data"],
     "properties": {
-      "<property1>": {
-        "description": "Required description of the property"
+      "api_key": {
+        "title": "API Key",
+        "type": "StringType",
+        "description": "Datadog API key.",
+        "default": "[[DATADOG_API_KEY]]"
       },
-      "<property2>": {
-        "default": "Optional metadata with any key.",
-        "description": "Required description of the property"
+      "app_key": {
+        "title": "App Key",
+        "type": "StringType",
+        "description": "Datadog App key.",
+        "default": "[[DATADOG_APP_KEY]]"
+      },
+      "metric": {
+        "title": "Metric",
+        "type": "StringType",
+        "description": "Custom metric that should be graphed on your dashboard in Datadog.",
+        "default": "my.value"
+      },
+      "value": {
+        "title": "Value",
+        "type": "FloatType",
+        "description": "Value to graph over time.",
+        "default": "{{ $value }}"
       }
     },
     "inputs": {
-      "<input1 | default>": {
-        "description": "Required description of the input"
-      },
-      "<input2>": {
-        "description": "Required description of the input"
+      "default": {
+        "description": "Any list of signals."
       }
     },
-    "outputs": {
-      "<output1 | default>": {
-        "description": "Required description of the output"
-      },
-      "<output2>": {
-        "description": "Required description of the output"
-      }
-    },
-    "commands": {
-      "<command1>": {
-        "description": "Required description of the command",
-        "type": "Optional type and other metadata with any key."
-      },
-      "<command2>": {
-        "description": "Required description of the command"
-      }
-    }
+    "outputs": {},
+    "commands": {}
   }
 }
