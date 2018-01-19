@@ -2,7 +2,9 @@
   "nio/DatadogCustomMetrics": {
     "version": "0.1.0",
     "description": "The DatadogCustomMetrics block will graph values in a timeseries graph on your Datadog dashboard. The `metric` property value must match the metric value specified in the graph on the dashboard.",
-    "categories": ["Web Data"],
+    "categories": [
+      "Web Data"
+    ],
     "properties": {
       "api_key": {
         "title": "API Key",
