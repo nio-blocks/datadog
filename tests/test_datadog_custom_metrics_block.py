@@ -1,5 +1,4 @@
-from unittest.mock import patch, MagicMock
-from nio.block.terminals import DEFAULT_TERMINAL
+from unittest.mock import patch
 from nio.signal.base import Signal
 from nio.testing.block_test_case import NIOBlockTestCase
 from ..datadog_custom_metrics_block import DatadogCustomMetrics
