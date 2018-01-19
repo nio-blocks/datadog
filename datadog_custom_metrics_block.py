@@ -5,7 +5,7 @@ from datadog import initialize, api
 
 class DatadogCustomMetrics(TerminatorBlock):
 
-    version = VersionProperty('0.1.0')
+    version = VersionProperty("0.1.0")
     api_key = StringProperty(title="API Key", default="[[DATADOG_API_KEY]]")
     app_key = StringProperty(title="APP Key", default="[[DATADOG_APP_KEY]]")
     metric = StringProperty(title="Metric", default="my.value")
